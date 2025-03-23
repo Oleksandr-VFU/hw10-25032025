@@ -1,0 +1,216 @@
+:root {
+    --color-black: #000000;
+    --color-white: #ffffff;
+    --color-gray: #eeeff1;
+    --color-primary: #34547a;
+    --color-secondary: #727272;
+
+    --font-size: 16px;
+    --font-family: "Roboto", sans-serif;
+
+    --letter-spacing: 0.1em;
+
+/* До --line-height одиниці em чи % можна не писати, згідно best practice, а просто лишати число, як коефіцієнт */
+    --line-height: 1.64;
+    --line-height-sm: 1.4;
+
+    --container-primary: 1110px;
+    --container-secondary: 540px;
+
+    --gap: 20px;
+    --gap-sm: calc(var(--gap) * 0.5); /* 10px - small */
+    --gap-lg: calc(var(--gap) * 1.5); /* 30px - large */
+    --gap-xl: calc(var(--gap) * 2); /* 40px - extra large */
+
+}
+
+/* Reset Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+
+/* Base Styles */
+html {
+    font-family: var(--font-family);
+    font-size: var(--font-size);
+    line-height: var(--line-height);
+    font-weight: 400;
+}
+
+a {
+    text-decoration: none;
+    color: var(--color-black);
+}
+
+h1 {
+    font-size: 3rem;
+    font-weight: 500;
+    line-height: var(--line-height-sm);
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 500;
+    line-height: var(--line-height-sm);
+}
+
+/* Сучасний підхід до визначення розміру контенера: */
+.container {
+    width: min(100% - var(--gap-xl), var(--container-primary)); /* Ширина контейнера з максимальним обмеженням 1110px */
+    margin-inline: auto; /* Автоматичний відступ з обох боків для центрування */
+}
+.container-sm {
+    width: min(100% - var(--gap-xl), var(--container-secondary)); /* Ширина контейнера з максимальним обмеженням 1110px */
+    margin-inline: auto; /* Автоматичний відступ з обох боків для центрування */
+}
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
+  
+/* Header Section*/
+.header {
+    background-color: var(--color-gray);
+    padding-top: 65px;
+    padding-bottom: 141px;
+}
+.navbar {
+    margin-bottom: 122px;
+}
+.navbar__list {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -0.75em;
+    gap: var(--gap);
+}
+.navbar__link {
+    display: block;
+    padding: 0.5em 0.75em;
+    text-transform: uppercase;
+}
+.navbar__link--active {
+    color: var(--color-primary);
+    font-weight: 500;
+}
+.header-content {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--container-secondary);
+    align-items: flex-start;
+}
+.header-content__title {
+    margin-bottom: 33px;
+    margin-top: 0;
+}
+.header-content__description {
+    color: var(--color-secondary);
+    margin-bottom: 52px;
+}
+.header-content__button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-width: 225px;
+    min-height: 65px;
+    background-color: var(--color-primary);
+    text-transform: uppercase;
+    color: var(--color-white);
+    padding: 0.5em;
+}
+
+/* Additional section properties */
+.section {
+    padding-top: 110px;
+    padding-bottom: 39px;
+    text-align: center;
+}
+.section__title {
+    margin-top: -23px;
+    margin-bottom: 32px;
+}
+.section__description {
+    color: var(--color-secondary);
+    margin-bottom: 0px;
+}
+
+/* About */
+.about {
+    background-color: var(--color-white);
+}
+
+/* Process */
+.process {
+    background-color: var(--color-gray);
+}
+
+/* Experience */
+.experience {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding-top: 100px;
+    padding-bottom: 94px;
+}
+.experience__container {
+    display: flex;
+    justify-content: space-between;
+    gap: var(--gap-xl);
+}
+.experience-item {
+    display: flex;
+    gap: var(--gap)
+}
+.experience-item__number {
+    font-size: 21px;
+    font-weight: 500;
+    margin-top: -5px;
+}
+.experience-item__image {
+    order: -1;
+}
+
+/* Video */
+.video {
+    padding-top: 10px;
+    padding-bottom: 92px;
+    background-color: var(--color-gray);
+}
+.video__iframe {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+    border: 0;
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-primary);
+    color: var(--color-white);
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+.footer__title {
+    font-size: 21px;
+    font-weight: 500;
+    margin-bottom: 5px;
+}
+.footer__description {
+    font-size: 13px;
+    font-weight: 400;
+}
+
+@media (width < 992px) {
+    .experience__container {
+        justify-content: space-evenly;
+    }
+}
