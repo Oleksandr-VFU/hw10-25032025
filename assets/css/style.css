@@ -190,6 +190,7 @@ h2 {
     height: 600px;
     object-fit: cover;
     border: 0;
+    min-height: 200px;
 }
 
 /* Footer */
@@ -210,7 +211,27 @@ h2 {
 }
 
 @media (width < 992px) {
+    .header {
+        padding-bottom: 80px;
+    }
+    .navbar {
+        margin-bottom: 70px;
+    }
     .experience__container {
+        flex-wrap: wrap;
         justify-content: space-evenly;
+    }
+}
+
+@media (width < 576px) {
+    .navbar {
+        margin-bottom: 50px;
+    }
+    .navbar__list {
+        justify-content: center;
+    }
+    .header-content {
+        text-align: center;
+        align-items: center;
     }
 }
