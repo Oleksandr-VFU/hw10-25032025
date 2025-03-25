@@ -98,6 +98,7 @@ h2 {
     display: block;
     padding: 0.5em 0.75em;
     text-transform: uppercase;
+    letter-spacing: var(--letter-spacing);
 }
 .navbar__link--active {
     color: var(--color-primary);
@@ -127,6 +128,7 @@ h2 {
     text-transform: uppercase;
     color: var(--color-white);
     padding: 0.5em;
+    letter-spacing: var(--letter-spacing);
 }
 
 /* Additional section properties */
@@ -233,5 +235,11 @@ h2 {
     .header-content {
         text-align: center;
         align-items: center;
+    }
+}
+
+@media (width < 375px) {
+    .video__iframe {
+        height: 150px;
     }
 }
