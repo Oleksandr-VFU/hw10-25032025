@@ -1,0 +1,13 @@
+$font-size: 16px;
+$font-family: "Roboto", sans-serif;
+$letter-spacing: 0.1em;
+
+/* До $line-height одиниці em чи % можна не писати, згідно best practice, а просто лишати число, як коефіцієнт */
+$line-height: 1.64;
+$line-height-sm: 1.4;
+$container-primary: 1110px;
+$container-secondary: 540px;
+$gap: 20px;
+$gap-sm: calc($gap * 0.5); /* 10px - small */
+$gap-lg: calc($gap * 1.5); /* 30px - large */
+$gap-xl: calc($gap * 2); /* 40px - extra large */

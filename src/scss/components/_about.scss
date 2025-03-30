@@ -1,0 +1,8 @@
+@use "../abstracts" as *;
+
+/* About */
+.about {
+  background-color: $color-white;
+
+  @include section();
+}

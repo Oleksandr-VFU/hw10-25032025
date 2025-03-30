@@ -1,0 +1,38 @@
+@use "../abstracts/" as *;
+
+/* Reset Styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+
+  list-style-type: none;
+}
+/* Сучасний підхід до визначення розміру контенера: */
+.container {
+  width: min(100% - $gap-xl, $container-primary); /* Ширина контейнера з максимальним обмеженням 1110px */
+
+  margin-inline: auto; /* Автоматичний відступ з обох боків для центрування */
+}
+.container-sm {
+  width: min(100% - $gap-xl, $container-secondary); /* Ширина контейнера з максимальним обмеженням 1110px */
+
+  margin-inline: auto; /* Автоматичний відступ з обох боків для центрування */
+}
+.visually-hidden {
+  position: absolute;
+
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+
+  white-space: nowrap;
+
+  border: 0;
+
+  clip-path: inset(100%);
+}

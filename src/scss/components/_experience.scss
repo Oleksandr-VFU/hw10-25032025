@@ -1,0 +1,35 @@
+@use "../abstracts" as *;
+
+/* Experience */
+.experience {
+  padding-top: 100px;
+  padding-bottom: 94px;
+
+  color: $color-white;
+  background-color: $color-primary;
+
+  @include experience-media();
+
+  &__container {
+    display: flex;
+    justify-content: space-between;
+
+    gap: $gap-xl;
+  }
+}
+.experience-item {
+  display: flex;
+
+  gap: $gap;
+
+  &__number {
+    margin-top: -5px;
+
+    font-size: 21px;
+    font-weight: 500;
+  }
+
+  &__image {
+    order: -1;
+  }
+}
